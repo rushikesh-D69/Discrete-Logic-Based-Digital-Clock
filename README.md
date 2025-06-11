@@ -1,6 +1,8 @@
 # Digital Clock using Digital ICs (24-Hour Format)
 
 This repository contains the schematic and design documentation for a fully functional 24-hour digital clock implemented using discrete digital ICs. The clock displays hours, minutes, and seconds on 7-segment displays and includes reset logic for full-cycle operation.
+
+WORKING MODEL: https://drive.google.com/file/d/1SXhtJnb3Bu8AmFg-KeR7OFbM0n97bKH2/view?usp=sharing 
 ![image](https://github.com/user-attachments/assets/d539cc95-36ca-4ffb-9358-e08ec521cad8)
 
 ## Project Description
