@@ -38,4 +38,12 @@ This clock circuit uses a combination of CD4026 counter/display driver ICs, a 55
 - A regulated 5V power supply ensures consistent operation.
 
 
+## Results
+
+The clock operates reliably and accurately, successfully counting and displaying time. All transitions (e.g., from 59 to 00, 23 to 00) function correctly. Challenges such as signal instability and display flicker were addressed through proper wiring, stable power supply, and logic tuning.
+
+## License
+
+This project is intended for educational use and is open for public reference and modification under the MIT License.
+
 
