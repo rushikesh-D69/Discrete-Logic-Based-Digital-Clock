@@ -1,43 +1,40 @@
 # Digital Clock using Digital ICs (24-Hour Format)
 
-This project is a real-life implementation of a **24-hour digital clock** using basic digital ICs. It features hours, minutes, and seconds counters, with reset logic and full real-time functionality.
+This repository contains the schematic and design documentation for a fully functional 24-hour digital clock implemented using discrete digital ICs. The clock displays hours, minutes, and seconds on 7-segment displays and includes reset logic for full-cycle operation.
 
----
+## Project Description
 
-## 🛠 Features
-- Displays **hours, minutes, and seconds**
-- Operates in **24-hour format**
-- Includes a **reset logic** for all counters
-- Built using standard **digital ICs** like 7490, 7447, etc.
+This clock circuit uses a combination of CD4026 counter/display driver ICs, a 555 timer for pulse generation, and various logic components to create a real-time digital clock. The display is in HH:MM:SS format using six 7-segment displays. A reset mechanism is included to return the time to 00:00:00 or enable manual adjustment.
 
----
+## Features
 
-##  Real-Life Implementation
-<p align="center">
-  <img src="images/real-circuit-photo.jpg" width="400" />
-</p>
+- Displays time in 24-hour HH:MM:SS format
+- Real-time second counting using 1Hz clock pulse from 555 timer
+- Six 7-segment displays driven by CD4026 ICs
+- Proper carry-over logic between seconds, minutes, and hours
+- Reset and manual set buttons included
+- Logic implemented using 7411 AND gates and discrete diodes
+- Debounced push buttons and stable power management
 
----
+## Components Used
 
-##  Schematic
-The schematic for the clock is included in the `schematic` folder.
+| Component            | Quantity |
+|----------------------|----------|
+| CD4026 IC            | 6        |
+| 7411 AND Gate IC     | 1        |
+| NE555 Timer IC       | 1        |
+| MAN74A 7-Segment     | 6        |
+| 1N4148 Diodes        | 5        |
+| PCB Board            | 1        |
+| IC Sockets & Wires   | As required |
 
-- [`finished_Circuit.pdf`](./schematic/finished_Circuit.pdf)
+## Circuit Overview
 
----
+- The 555 timer generates a stable 1Hz clock signal.
+- CD4026 ICs are used to count and drive each 7-segment display.
+- Reset logic is implemented using 7411 AND gates and diodes to reset counters at 60 seconds, 60 minutes, and 24 hours.
+- Debouncing capacitors are used with the push buttons.
+- A regulated 5V power supply ensures consistent operation.
 
-##  Components Used
-- 7490 Decade Counter ICs
-- 7447 BCD to 7-Segment Decoder
-- 7-Segment Displays
-- 555 Timer IC (as clock pulse generator)
-- Logic gates for reset logic
-- Capacitors, resistors, breadboard/power supply
 
----
-
-##  Reset Logic
-Implements auto-reset at:
-- 24:00:00 back to 00:00:00
-- Manual reset using external push-button
 
